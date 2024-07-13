@@ -7,7 +7,13 @@
     <title>Myntra</title>
 
     <link rel="icon" href="image/myntra_logo.webp">
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" media="screen and (min-width:1200px)" href="css/media_1200.css">
+    <link rel="stylesheet" media="screen and (min-width:992px) and (max-width:1199px)" href="css/media_992.css">
+    <link rel="stylesheet" media="screen and (min-width:768px) and (max-width:991px)" href="css/media_768.css">
+    <link rel="stylesheet" media="screen and (min-width:600px) and (max-width:767px)" href="css/media_600.css">
+    <link rel="stylesheet" media="screen and (max-width:599px)" href="css/media_max600.css">
+
 </head>
 
 <body>
@@ -17,7 +23,7 @@
             <div class="nav_container">
 
                 <div class="nav_part1">
-                    <a href="#"><img src="image/myntra_logo.webp" alt="myntra_logo" width="70px"></a>
+                    <a href="#" class="nav_logo"><img src="image/myntra_logo.webp" alt="myntra_logo" width="70px"></a>
                     <a href="">MEN</a>
                     <a href="">WOMEN</a>
                     <a href="">KIDS</a>
@@ -54,13 +60,28 @@
                         </div>
                     </div>
 
+                    <div class="nav_part2_more">
+                        <span class="nav_part2_menu_btn"><img width="22px" src="image/nav/menu.svg" alt=" "></span>
+                        <span><p>Menu</p></span>
+                    </div>
+                </div>
+
+                <div class="nav_part4">
+                    <ul>
+                        <li><a href="">MEN</a></li>
+                        <li><a href="">WOMEN</a></li>
+                        <li><a href="">KIDS</a></li>
+                        <li><a href="">HOME&nbsp;&&nbsp;LIVING</a></li>
+                        <li><a href="">BEAUTY</a></li>
+                        <li><a href="">STUDIO<sup style="color: red; font-size: 10px;">NEW</sup></a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <div style="width: 100%; height: 100px;"></div>
+        <div class="start" style="width: 100%;"></div>
 
         <div class="ad_banner">
 
