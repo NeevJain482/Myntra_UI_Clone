@@ -1,87 +1,138 @@
 <!DOCTYPE html>
 <html>
-<style>
-    .container {
-        display: block;
-        position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 22px;
-    }
 
-    .container input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-    }
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box
+        }
 
-    .checkmark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-        border-radius: 50%;
-    }
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
 
+        .mySlides {
+            display: none
+        }
 
-    .container:hover input~.checkmark {
-        background-color: #ccc;
-    }
+        img {
+            vertical-align: middle;
+        }
 
-    .container input:checked~.checkmark {
-        background-color: #2196F3;
-    }
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
 
-    .checkmark:after {
-        content: "";
-        position: absolute;
-    }
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
 
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
 
-    .container input:checked ~ .checkmark:after {
-        display: block;
-    }
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
 
-    .container .checkmark:after {
-        top: 9px;
-        left: 9px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: white;
-    }
-</style>
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+</head>
 
 <body>
 
-    <h1>Custom Radio Buttons</h1>
+    <div class="slideshow-container">
 
-    <label class="container">
-        One
-        <input type="radio" checked="checked" name="radio">
-        <span class="checkmark"></span>
-    </label>
+        <div class="mySlides fade">
+            <img src="image/slide/first/slide1.webp" style="width:100%">
+            <div class="text">Caption Text</div>
+        </div>
 
-    <label class="container">
-        Two
-        <input type="radio" name="radio">
-        <span class="checkmark"></span>
-    </label>
+        <div class="mySlides fade">
+            <img src="image/slide/first/slide2.webp" style="width:100%">
+            <div class="text">Caption Two</div>
+        </div>
 
-    <label class="container">
-        Three
-        <input type="radio" name="radio">
-        <span class="checkmark"></span>
-    </label>
+        <div class="mySlides fade">
+            <img src="image/slide/first/slide3.webp" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
 
-    <label class="container">
-        Four
-        <input type="radio" name="radio">
-        <span class="checkmark"></span>
-    </label>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
 
 </body>
 

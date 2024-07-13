@@ -6,9 +6,14 @@
   font-family: Ubuntu;
   box-sizing: border-box;
 }
-body{
-    width: 100%;
-    min-height: 100vh;
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------*/
@@ -16,8 +21,6 @@ body{
 /*  HEADER */
 /*-----------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------*/
-
-
 
 /*-----------------------------------------------------------------------------------------------------------------*/
 /*  Navigation */
@@ -44,6 +47,7 @@ nav {
   color: black;
   font-weight: 500;
   font-size: 14px;
+  padding: 0 3px;
 }
 
 .nav_part1,
@@ -100,7 +104,6 @@ nav {
   padding: 0 25px;
 }
 
-
 /*-----------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------*/
 /* MAIN */
@@ -108,17 +111,216 @@ nav {
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 
+
 /*-----------------------------------------------------------------------------------------------------------------*/
-/* FIRST SLIDER */
+/* COMMAN STYLE  */
 /*-----------------------------------------------------------------------------------------------------------------*/
 
-.slides{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    overflow: hidden;
+.slide_btn{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 100%;
+  background-color: rgb(200, 200, 200);
+  margin: 0 5px;
 }
 
-.slides > img{
-    width: 100%;
+.heading{
+  color: rgb(80, 80, 80);
+  padding: 30px ;
 }
+
+.slide{
+  display: flex;
+  flex-direction: row;
+}
+
+.slide > img{
+  width: 16.66%;
+}
+main div{
+  margin-bottom: 50px;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+/* AD BANNER */
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.ad_banner{
+  width: 100%;
+}
+
+.ad_banner .ad_container > img{
+  width: 100%;
+}
+
+.ad_btn_selector{
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+/* MEDAL WORTHY BRANDS TO BAG  */
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+/* GRAND GLOBAL BRANDS */
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+/* SHOP BY CATEGORY */
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.category_slide{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.category_slide > img{
+  width: 259px;
+  padding: 1%;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------*/
+/* FOOTER */
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.footer_container{
+  width: 90%;
+  margin: auto;
+}
+
+.footer_container>div{
+  margin-bottom: 50px;
+}
+
+.footer_nav{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto 30%;
+}
+
+.footer_nav_item{
+  text-align: start;
+}
+
+.footer_nav_item > span{
+  display: block;
+  font-size: 14px;
+}
+
+.column1{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.column1_item1{
+  margin-bottom: 30px;
+}
+.column1_item1>span,
+.column1_item2>span{
+  display: block;
+  padding: 5px 0;
+  font-size: 14px;
+}
+.column1_item1>span>a,
+.column1_item2>span>a{
+  color: grey;
+}
+.column1_item1>span:nth-child(1)>a,
+.column1_item2>span:nth-child(1)>a{
+  color: #000;
+  font-weight: bold;
+}
+
+.column2 > span{
+  padding: 5px 0;
+}
+.column2>span>a{
+  color: grey;
+}
+.column2>span:nth-child(1)>a{
+  color: #000;
+  font-weight: bold;
+}
+
+.column3>span{
+  color: black;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.column3>div{
+  margin-bottom: 30px;
+}
+.column3 .mobile_links>a{
+  margin-right:10px;
+}
+.column3 .other_plateforms>a{
+  margin-right: 10px;
+}
+.column3 .mobile_links>a>img{
+  height: 42px;
+}
+
+.column4 .column4_item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+.column4 .column4_item>img{
+  margin-right: 10px;
+}
+.column4 .column4_item>span{
+  color: grey;
+}
+.column4 .column4_item>span>span{
+  color: black;
+  font-weight: 500;
+}
+
+.most_search .most_search_title{
+  position: relative;
+}
+.most_search > div:nth-child(1){
+  margin-bottom: 30px;
+}
+.most_search .most_search_title>span{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 14px;
+  padding-right: 10px;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 500;
+  transform: translate(0,-7px);
+}
+.most_search .most_search_links_item{
+  display: inline-block;
+  height: 30px;
+}
+.most_search .most_search_links_item>a,
+.most_search .most_search_links_item>span{
+  height: 50px;
+  margin-right: 5px;
+  color: grey;
+}
+
+
+
