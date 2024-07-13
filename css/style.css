@@ -11,20 +11,20 @@ body {
   min-height: 100vh;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
 
-/*-----------------------------------------------------------------------------------------------------------------*/
+.start {
+  height: 60px;
+}
+
 /*-----------------------------------------------------------------------------------------------------------------*/
 /*  HEADER */
 /*-----------------------------------------------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------------------------------------------*/
 
-/*-----------------------------------------------------------------------------------------------------------------*/
 /*  Navigation */
-/*-----------------------------------------------------------------------------------------------------------------*/
 
 nav {
   width: 100%;
@@ -104,19 +104,18 @@ nav {
   padding: 0 25px;
 }
 
-/*-----------------------------------------------------------------------------------------------------------------*/
+.nav_part2_more,
+.nav_part4 {
+  display: none;
+}
+
 /*-----------------------------------------------------------------------------------------------------------------*/
 /* MAIN */
 /*-----------------------------------------------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------------------------------------------*/
 
-
-
-/*-----------------------------------------------------------------------------------------------------------------*/
 /* COMMAN STYLE  */
-/*-----------------------------------------------------------------------------------------------------------------*/
 
-.slide_btn{
+.slide_btn {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -126,61 +125,50 @@ nav {
   margin: 0 5px;
 }
 
-.heading{
+.heading {
   color: rgb(80, 80, 80);
-  padding: 30px ;
+  padding: 30px;
 }
 
-.slide{
+.slide {
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 
-.slide > img{
+.slide > img {
   width: 16.66%;
 }
-main div{
+main div {
   margin-bottom: 50px;
 }
 
-
-
-/*-----------------------------------------------------------------------------------------------------------------*/
 /* AD BANNER */
-/*-----------------------------------------------------------------------------------------------------------------*/
 
-.ad_banner{
+.ad_banner {
   width: 100%;
 }
 
-.ad_banner .ad_container > img{
+.ad_banner .ad_container > img {
   width: 100%;
 }
 
-.ad_btn_selector{
+.ad_btn_selector {
   width: 100%;
   text-align: center;
 }
 
-
-
-/*-----------------------------------------------------------------------------------------------------------------*/
 /* MEDAL WORTHY BRANDS TO BAG  */
-/*-----------------------------------------------------------------------------------------------------------------*/
 
 
 
-/*-----------------------------------------------------------------------------------------------------------------*/
 /* GRAND GLOBAL BRANDS */
-/*-----------------------------------------------------------------------------------------------------------------*/
 
 
 
-/*-----------------------------------------------------------------------------------------------------------------*/
 /* SHOP BY CATEGORY */
-/*-----------------------------------------------------------------------------------------------------------------*/
 
-.category_slide{
+.category_slide {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -188,119 +176,117 @@ main div{
   justify-content: center;
 }
 
-.category_slide > img{
+.category_slide > img {
   width: 259px;
   padding: 1%;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------------------------------------------*/
 /* FOOTER */
 /*-----------------------------------------------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------------------------------------------*/
 
-.footer_container{
+.footer_container {
   width: 90%;
   margin: auto;
 }
 
-.footer_container>div{
+.footer_container > div {
   margin-bottom: 50px;
 }
 
-.footer_nav{
+.footer_nav {
   width: 100%;
   display: grid;
   grid-template-columns: auto auto auto 30%;
 }
 
-.footer_nav_item{
+.footer_nav_item {
   text-align: start;
 }
 
-.footer_nav_item > span{
+.footer_nav_item > span {
   display: block;
   font-size: 14px;
 }
 
-.column1{
+.column1 {
   display: flex;
   align-items: start;
   flex-direction: column;
 }
-.column1_item1{
+.column1_item1 {
   margin-bottom: 30px;
 }
-.column1_item1>span,
-.column1_item2>span{
+.column1_item1 > span,
+.column1_item2 > span {
   display: block;
-  padding: 5px 0;
+  padding: 0 0 5px 0;
   font-size: 14px;
 }
-.column1_item1>span>a,
-.column1_item2>span>a{
+.column1_item1 > span > a,
+.column1_item2 > span > a {
   color: grey;
 }
-.column1_item1>span:nth-child(1)>a,
-.column1_item2>span:nth-child(1)>a{
+.column1_item1 > span:nth-child(1) > a,
+.column1_item2 > span:nth-child(1) > a {
   color: #000;
   font-weight: bold;
 }
 
-.column2 > span{
-  padding: 5px 0;
+.column2 > span {
+  padding: 0 0 5px 0;
 }
-.column2>span>a{
+.column2 > span > a {
   color: grey;
 }
-.column2>span:nth-child(1)>a{
+.column2 > span:nth-child(1) > a {
   color: #000;
   font-weight: bold;
 }
 
-.column3>span{
+.column3 > span {
   color: black;
   font-weight: bold;
   margin-bottom: 15px;
 }
-.column3>div{
+.column3 > div {
   margin-bottom: 30px;
 }
-.column3 .mobile_links>a{
-  margin-right:10px;
-}
-.column3 .other_plateforms>a{
+.column3 .mobile_links > a {
   margin-right: 10px;
 }
-.column3 .mobile_links>a>img{
+.column3 .other_plateforms > a {
+  margin-right: 10px;
+}
+.column3 .mobile_links > a > img {
   height: 42px;
 }
 
-.column4 .column4_item{
+.column4 .column4_item {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: start;
   margin-bottom: 20px;
 }
-.column4 .column4_item>img{
+.column4 .column4_item > img {
   margin-right: 10px;
 }
-.column4 .column4_item>span{
+.column4 .column4_item > span {
   color: grey;
 }
-.column4 .column4_item>span>span{
+.column4 .column4_item > span > span {
   color: black;
   font-weight: 500;
 }
 
-.most_search .most_search_title{
+.most_search .most_search_title {
   position: relative;
 }
-.most_search > div:nth-child(1){
+.most_search > div:nth-child(1) {
   margin-bottom: 30px;
 }
-.most_search .most_search_title>span{
+.most_search .most_search_title > span {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -309,18 +295,360 @@ main div{
   background-color: white;
   font-size: 14px;
   font-weight: 500;
-  transform: translate(0,-7px);
+  transform: translate(0, -7px);
 }
-.most_search .most_search_links_item{
+.most_search .most_search_links_item {
   display: inline-block;
   height: 30px;
 }
-.most_search .most_search_links_item>a,
-.most_search .most_search_links_item>span{
+.most_search .most_search_links_item > a,
+.most_search .most_search_links_item > span {
   height: 50px;
   margin-right: 5px;
   color: grey;
 }
 
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------*/
+/* MEDIA QUERIES */
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1199px){
+  /*----- HEADER -----*/
+
+  /*  Navigation */
+
+  .nav_container {
+    padding: 10px 0;
+  }
+
+  .nav_part1 {
+    width: 55.99%;
+  }
+
+  .nav_part2 {
+    width: 45.99%;
+  }
+
+  /* SHOP BY CATEGORY */
+
+  .category_slide > img {
+    width: 200px;
+    margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 991px){
+  /*-----HEADER-----*/
+
+  /*  Navigation */
+
+  .nav_container {
+    padding: 10px 0;
+  }
+
+  .nav_container a {
+    padding: 0 5px;
+  }
+
+  .nav_part1 {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 0 5px;
+  }
+
+  .nav_part2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    padding: 0 5px;
+  }
+
+  .nav_part2_search {
+    width: fit-content;
+  }
+
+  .nav_part2_search > input {
+    width: 40px;
+  }
+
+  .nav_part2_uesr_info > div {
+    padding: 0 15px;
+  }
+
+  /*-----MAIN-----*/
+
+  /* COMMAN STYLE  */
+
+  .slide > img {
+    width: 24.99%;
+  }
+
+  /* MEDAL WORTHY BRANDS TO BAG  */
 
 
+
+  /* GRAND GLOBAL BRANDS */
+
+
+
+  /* SHOP BY CATEGORY */
+
+  .category_slide > img {
+    width: 200px;
+    margin: 0 15px;
+  }
+
+  /*-----FOOTER----- */
+
+  .footer_nav {
+    grid-template-columns: auto auto 50%;
+    grid-template-rows: auto auto;
+    gap: 10px;
+  }
+
+  .column1{
+    grid-row: 1 / 3;
+  }
+
+  .column3 {
+    grid-row-start: 1;
+    grid-column-start: 3;
+  }
+
+  .column4 {
+    grid-row-start: 2;
+    grid-column-start: 3;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .start{
+    height: 50px;
+  }
+  
+  /*-----HEADER-----*/
+  
+  /*  Navigation */
+  
+  nav {
+    width: 100%;
+    position: fixed;
+    background-color: white;
+  }
+  
+  .nav_container {
+    padding: 10px 0;
+  }
+  
+  .nav_container a {
+    padding: 0 5px;
+  }
+  
+  .nav_part1 a:not(.nav_logo) {
+    display: none;
+  }
+  
+  .nav_logo {
+    margin-left: 15px;
+  }
+  
+  .nav_part2 {
+    width: fit-content;
+    justify-content: start;
+    padding: 0 5px;
+  }
+  
+  .nav_part2_search {
+    width: fit-content;
+  }
+  
+  .nav_part2_search > input {
+    width: 40px;
+  }
+  
+  .nav_part2_more,
+  .nav_part2_uesr_info > div {
+    padding: 0 15px;
+  }
+  
+  .nav_part2_more {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /*------MAIN-----*/
+  
+  /* COMMAN STYLE  */
+  
+  .slide > img {
+    width: 33.33%;
+  }
+  
+  /* AD BANNER */
+
+  
+  
+  /* MEDAL WORTHY BRANDS TO BAG  */
+
+  
+
+  /* GRAND GLOBAL BRANDS */
+
+  
+
+  /* SHOP BY CATEGORY */
+  
+  .category_slide > img {
+    width: 150px;
+    margin: 0 15px;
+  }
+  
+  /*-----FOOTER-----*/
+  
+  .footer_nav {
+    grid-template-columns: 49.99% 49.99%;
+    grid-template-rows: auto auto;
+    gap: 10px;
+  }
+
+  .column1{
+    grid-row: 1 / 2;
+  }
+
+  .column3{
+    grid-row-start: 2;
+    grid-column: 1 / 3;
+  }
+
+  .column4{
+    grid-row-start: 3;
+    grid-column: 1 / 3;
+  }
+
+  .column3 .mobile_links > a > img {
+    height: 39px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .start {
+    height: 50px;
+  }
+
+  /*-----------------------------------------------------------------------------------------------------------------*/
+  /*  HEADER */
+  /*-----------------------------------------------------------------------------------------------------------------*/
+
+  /*  Navigation */
+  .nav_container {
+    padding: 10px 0;
+  }
+
+  .nav_container a {
+    padding: 0 5px;
+  }
+
+  .nav_part1 a:not(.nav_logo) {
+    display: none;
+  }
+
+  .nav_logo {
+    margin-left: 15px;
+  }
+
+  .nav_part2 {
+    width: fit-content;
+    justify-content: start;
+    padding: 0 5px;
+  }
+
+  .nav_part2_search {
+    width: fit-content;
+    position: relative;
+  }
+
+  .nav_part2_search > input {
+    width: 40px;
+  }
+
+  .nav_part2_uesr_info {
+    display: none;
+  }
+  .nav_part2_more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 15px;
+  }
+
+  /*-----------------------------------------------------------------------------------------------------------------*/
+  /* MAIN */
+  /*-----------------------------------------------------------------------------------------------------------------*/
+
+  /* COMMAN STYLE  */
+  .heading {
+    padding: 0 15px;
+    font-size: 10px;
+  }
+
+  .slide > img {
+    width: 49.99%;
+  }
+
+  /* AD BANNER */
+
+  /* MEDAL WORTHY BRANDS TO BAG  */
+
+  /* GRAND GLOBAL BRANDS */
+
+  /* SHOP BY CATEGORY */
+
+  .category_slide > img {
+    width: 120px;
+    padding: 0;
+    margin: 5px 5px;
+  }
+
+  /*-----------------------------------------------------------------------------------------------------------------*/
+  /* FOOTER */
+  /*-----------------------------------------------------------------------------------------------------------------*/
+  .footer_container .footer_nav {
+    grid-template-columns: 49.99% 49.99%;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+  }
+
+  .column1{
+    grid-row: 1 / 2;
+  }
+
+  .column2 {
+    grid-row-start: 1;
+    grid-column: 2;
+  }
+
+  .column3 {
+    grid-row-start: 2;
+    grid-column: 1 / 3;
+  }
+  .column3 .mobile_links {
+    width: 100%;
+  }
+  .column3 .mobile_links > a > img {
+    height: 39px;
+  }
+
+  .column4 {
+    grid-row-start: 3;
+  }
+}
