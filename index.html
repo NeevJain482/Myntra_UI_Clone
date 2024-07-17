@@ -7,28 +7,36 @@
     <title>Myntra</title>
 
     <link rel="icon" href="image/myntra_logo.webp">
-
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" media="screen and (min-width:992px) and (max-width:1199px)" href="css/media_992.css">
-    <link rel="stylesheet" media="screen and (min-width:768px) and (max-width:991px)" href="css/media_768.css">
-    <link rel="stylesheet" media="screen and (min-width:600px) and (max-width:767px)" href="css/media_600.css">
+    <script src="scripts/script.js" defer></script>
 
 </head>
 
 <body>
 
     <header>
+
+        <div id="opacity">
+            <div onmouseout="navBtnHoverOut(1)" onmouseover="navBtnHover(1)" id="navBtnShow1" class="men">Men</div>
+            <div onmouseout="navBtnHoverOut(2)" onmouseover="navBtnHover(2)" id="navBtnShow2" class="women">Women</div>
+            <div onmouseout="navBtnHoverOut(3)" onmouseover="navBtnHover(3)" id="navBtnShow3" class="kids">Kids</div>
+            <div onmouseout="navBtnHoverOut(4)" onmouseover="navBtnHover(4)" id="navBtnShow4" class="home">Home</div>
+            <div onmouseout="navBtnHoverOut(5)" onmouseover="navBtnHover(5)" id="navBtnShow5" class="beauty">Beauty</div>
+            <div onmouseout="navBtnHoverOut(6)" onmouseover="navBtnHover(6)" id="navBtnShow6" class="studio">Studio</div>
+        </div>
+
         <nav>
             <div class="nav_container">
 
                 <div class="nav_part1">
                     <a href="#" class="nav_logo"><img src="image/myntra_logo.webp" alt="myntra_logo" width="70px"></a>
-                    <a href="">MEN</a>
-                    <a href="">WOMEN</a>
-                    <a href="">KIDS</a>
-                    <a href="">HOME&nbsp;&&nbsp;LIVING</a>
-                    <a href="">BEAUTY</a>
-                    <a href="">STUDIO<sup style="color: red; font-size: 10px;">NEW</sup></a>
+                    <a onmouseout="navBtnHoverOut(1)" onmouseover="navBtnHover(1)" href="">MEN</a>
+                    <a onmouseout="navBtnHoverOut(2)" onmouseover="navBtnHover(2)" href="">WOMEN</a>
+                    <a onmouseout="navBtnHoverOut(3)" onmouseover="navBtnHover(3)" href="">KIDS</a>
+                    <a onmouseout="navBtnHoverOut(4)" onmouseover="navBtnHover(4)" href="">HOME&nbsp;&&nbsp;LIVING</a>
+                    <a onmouseout="navBtnHoverOut(5)" onmouseover="navBtnHover(5)" href="">BEAUTY</a>
+                    <a onmouseout="navBtnHoverOut(6)" onmouseover="navBtnHover(6)" href="">STUDIO<sup
+                            style="color: red; font-size: 10px;">NEW</sup></a>
                 </div>
 
                 <div class="nav_part2">
@@ -60,20 +68,12 @@
                     </div>
 
                     <div class="nav_part2_more">
-                        <span class="nav_part2_menu_btn"><img width="22px" src="image/nav/menu.svg" alt=" "></span>
-                        <span><p>Menu</p></span>
+                        <span class="nav_part2_menu_btn" onclick="showMenu()"><img width="22px" src="image/nav/menu.svg"
+                                alt=" "></span>
+                        <span>
+                            <p>Menu</p>
+                        </span>
                     </div>
-                </div>
-
-                <div class="nav_part4">
-                    <ul>
-                        <li><a href="">MEN</a></li>
-                        <li><a href="">WOMEN</a></li>
-                        <li><a href="">KIDS</a></li>
-                        <li><a href="">HOME&nbsp;&&nbsp;LIVING</a></li>
-                        <li><a href="">BEAUTY</a></li>
-                        <li><a href="">STUDIO<sup style="color: red; font-size: 10px;">NEW</sup></a></li>
-                    </ul>
                 </div>
             </div>
         </nav>
